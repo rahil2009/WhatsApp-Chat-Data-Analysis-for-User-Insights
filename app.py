@@ -62,9 +62,9 @@ if uploaded_file is not None:
     # if key == "k":
     #     st.sidebar.button("Button clicked!")
     
-    key = keyboard.read_event()
-    if key.name == "k":
-        st.sidebar.button("Button clicked!")
+    # key = keyboard.read_event()
+    # if key.name == "k":
+    #     st.sidebar.button("Button clicked!")
 
         # finding busiest users (group level)
         if selected_user=='Overall':
