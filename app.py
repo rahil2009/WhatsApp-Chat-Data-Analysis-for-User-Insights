@@ -37,6 +37,8 @@ if uploaded_file is not None:
 
     selected_user = st.sidebar.selectbox('Show analysis with respect to',user_list)
 
+    
+
     #Implementing Analysis
     if st.sidebar.button("Show Analysis"):
 
@@ -189,7 +191,11 @@ if uploaded_file is not None:
             ax.bar(most_emojis["emoji"].head(),most_emojis["count"].head())
             st.pyplot(fig)
 
-        
+        st.text("\n") 
+        url = "https://health-insurance-cost.streamlit.app/"
+        st.write(
+            "Link to project No:3 [Health Insurance Cost Prediction Web App](%s)" % url
+            )
 
        
        
