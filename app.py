@@ -5,6 +5,20 @@ import keyboard
 import seaborn as sns
 
 st.sidebar.title("WhatsApp Chat Analyzer")
+st.title("WhatsApp Chat Analyzer")
+
+        # Add a description
+st.write("""
+            <span style="font-family: Arial, sans-serif; font-size: 20px;">
+            <strong>
+            We conducted an extensive analysis of WhatsApp chat data, revealing crucial trends and patterns. 
+            These insights deepened our understanding of user behavior, allowing us to tailor strategies and services to better meet their needs.
+            By employing diverse data analysis methodologies and tools, we enhanced our ability to interpret and understand data.
+            Ultimately, this informed decision-making and improved strategic planning.
+            </strong>
+            </span>
+""", unsafe_allow_html=True)
+
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
@@ -28,17 +42,17 @@ if uploaded_file is not None:
 
         number_messages,num_words,num_media,links=helper.fetch_stats(selected_user,df)
 
-        # Add a description
-        st.write("""
-                 <span style="font-family: Arial, sans-serif; font-size: 20px;">
-                 <strong>
-                 We conducted an extensive analysis of WhatsApp chat data, revealing crucial trends and patterns. 
-                 These insights deepened our understanding of user behavior, allowing us to tailor strategies and services to better meet their needs.
-                  By employing diverse data analysis methodologies and tools, we enhanced our ability to interpret and understand data.
-                  Ultimately, this informed decision-making and improved strategic planning.
-                 </strong>
-                 </span>
-        """, unsafe_allow_html=True)
+        # # Add a description
+        # st.write("""
+        #          <span style="font-family: Arial, sans-serif; font-size: 20px;">
+        #          <strong>
+        #          We conducted an extensive analysis of WhatsApp chat data, revealing crucial trends and patterns. 
+        #          These insights deepened our understanding of user behavior, allowing us to tailor strategies and services to better meet their needs.
+        #           By employing diverse data analysis methodologies and tools, we enhanced our ability to interpret and understand data.
+        #           Ultimately, this informed decision-making and improved strategic planning.
+        #          </strong>
+        #          </span>
+        # """, unsafe_allow_html=True)
         st.title("Top Statistics")
 
         col1,col2,col3,col4= st.columns(4)
